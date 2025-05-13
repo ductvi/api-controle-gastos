@@ -1,0 +1,363 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --info-color: #3498db;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --white: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estrutura principal */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem; /* Espaço antes do footer */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#userEmail {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* --- MAIN CONTENT --- */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  flex: 1;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* --- FORM STYLES --- */
+#formTransacao {
+  margin-top: 1.5rem;
+}
+
+#novaTransacaoForm div {
+  margin-bottom: 1rem;
+}
+
+#novaTransacaoForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+#novaTransacaoForm input,
+#novaTransacaoForm select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+#novaTransacaoForm input:focus,
+#novaTransacaoForm select:focus {
+  border-color: var(--info-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* --- BUTTONS --- */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+#logoutBtn {
+  background-color: var(--danger-color);
+  color: var(--white);
+}
+
+#logoutBtn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+#novaTransacaoForm button {
+  background-color: var(--success-color);
+  color: var(--white);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#novaTransacaoForm button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* --- TRANSACTIONS LIST --- */
+#listaTransacoes {
+  margin-top: 2rem;
+}
+
+.transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: var(--transition);
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+}
+
+.transacao:hover {
+  background-color: #f9f9f9;
+  transform: translateX(5px);
+}
+
+.transacao-info {
+  flex: 1;
+}
+
+.transacao-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-editar, 
+.btn-excluir {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-editar {
+  background-color: var(--info-color);
+  color: var(--white);
+}
+
+.btn-editar:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-excluir {
+  background-color: var(--danger-color);
+  color: var(--white);
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+/* Footer fixo na base */
+.footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  margin-top: auto; /* Empurra para baixo */
+}
+
+.footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* --- UTILITY CLASSES --- */
+.text-success {
+  color: var(--success-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  #logoutBtn {
+    width: 100%;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+
+  .transacao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .transacao-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Adicione ao seu dashboard.css */
+.valor-positivo {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.valor-negativo {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.no-transactions {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 1rem;
+}
+
+/* Estilos para mensagens */
+.message {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.message.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+/* Estilos para valores */
+.valor-positivo {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.valor-negativo {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.saldo-positivo {
+  color: #2e7d32;
+}
+
+.saldo-negativo {
+  color: #c62828;
+}
+
+/* Estilos para transações */
+.transacao {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.transacao-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sem-transacoes {
+  text-align: center;
+  color: #757575;
+  font-style: italic;
+  padding: 20px;
+}

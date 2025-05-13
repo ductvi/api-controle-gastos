@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Controle de Gastos</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <h1>💰 Controle de Gastos</h1>
+        </div>
+        <nav class="nav">
+            <span id="userEmail">Usuário: carregando...</span>
+            <button id="logoutBtn">Sair</button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Card de saldo -->
+        <div class="card" id="cardSaldo">
+            <h2>Saldo Atual</h2>
+            <p id="saldo">Carregando...</p>
+        </div>
+
+        <!-- Formulário de nova transação -->
+        <div class="card" id="formTransacao">
+            <h2>Adicionar Transação</h2>
+            <form id="novaTransacaoForm">
+                <div>
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" required>
+                </div>
+                <div>
+                    <label for="valor">Valor (R$):</label>
+                    <input type="number" id="valor" step="0.01" required>
+                </div>
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required>
+                </div>
+                <div>
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" required>
+                        <option value="Receita">Receita</option>
+                        <option value="Despesa">Despesa</option>
+                    </select>
+                </div>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+
+        <!-- Adicione esta seção após o formulário de nova transação -->
+        <div class="card" id="listaTransacoes">
+            <h2>Suas Transações</h2>
+            <div id="transacoesContainer">
+                <!-- As transações serão carregadas aqui dinamicamente -->
+            </div>
+        </div>
+
+        <script src="dashboard.js"></script>
+</body>
+
+</html>
