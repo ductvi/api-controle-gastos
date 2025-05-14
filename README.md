@@ -1,7 +1,7 @@
 # 💰 Controle Financeiro Pessoal
 
-![Preview da Aplicação]([https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print1.jpg?raw=true])  
-![Preview da Aplicação2]([https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print2.jpg?raw=true])  
+![Preview da Aplicação](https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print1.jpg?raw=true)  
+![Preview da Aplicação2](https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print2.jpg?raw=true)  
 
 Um sistema completo para gerenciamento financeiro pessoal com frontend intuitivo e API robusta.
 
