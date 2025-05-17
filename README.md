@@ -1,4 +1,4 @@
-# 💰 Controle Financeiro Pessoal
+# Controle Financeiro Pessoal
 
 ![Preview da Aplicação](https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print1.jpg?raw=true)  
 ![Preview da Aplicação2](https://github.com/ductvi/api-controle-gastos/blob/main/imagens/print2.jpg?raw=true)  
@@ -7,7 +7,7 @@ Um sistema completo para gerenciamento financeiro pessoal com frontend intuitivo
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - 🧑‍💻 **Autenticação de usuários** (login/cadastro)  
 - 📊 **Dashboard** com resumo financeiro  
@@ -18,7 +18,7 @@ Um sistema completo para gerenciamento financeiro pessoal com frontend intuitivo
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 ### Frontend  
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)  
@@ -32,7 +32,7 @@ Um sistema completo para gerenciamento financeiro pessoal com frontend intuitivo
 
 ---
 
-## 📌 Melhorias Futuras
+## Melhorias Futuras
 
 - [ ] Adicionar gráficos interativos  
 - [ ] Implementar exportação para Excel  
